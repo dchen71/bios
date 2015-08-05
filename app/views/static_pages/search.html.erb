@@ -10,4 +10,8 @@
 <p><%= @seq.rna %></p>
 
 <h3>Translated</h3>
-<p><%= @seq.translate %></p>
+<% if @seq.length >= 3 %>
+	<p><%= @seq.translate %></p>
+<% else %>
+	<p>Proteins are each 3 nucleotide long</p>
+<% end %>

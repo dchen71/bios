@@ -1,5 +1,5 @@
-<h1>Search for nucleotides</h1>
-<%= form_tag('/search',method: 'get') do  %>
+<h1>Search for nucleotides(ACGT)</h1>
+<%= form_tag('/search',method: 'get', id: 'nucsearch') do  %>
   <%= label_tag(:nucleotide, 'Input nucleotides') %>
   <br>
   <%= text_area_tag :nucleotide %>

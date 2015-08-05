@@ -1,0 +1,8 @@
+<h1>Search for nucleotides</h1>
+<%= form_tag('/search',method: 'get') do  %>
+  <%= label_tag(:nucleotide, 'Input nucleotides') %>
+  <br>
+  <%= text_area_tag :nucleotide %>
+  <br>
+  <%= submit_tag 'Submit' %>
+<% end %>

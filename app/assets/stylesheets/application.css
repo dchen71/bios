@@ -17,3 +17,10 @@
 .error {
 	color:red;
 }
+
+#nuc_search{
+	resize: none;
+	width: 25%;
+	min-height: 100px;
+	height: 25%;
+}

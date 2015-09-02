@@ -14,6 +14,43 @@
  *= require_self
  */
 
+/* Variables */
+$background: #C2C2D6;
+$header-background: #B2B2CC;
+
+
+/* Global */
+
+html{
+	background-color: $background;
+}
+
+.content{
+	margin-top: 50px;
+}
+
+/* Header*/
+
+header{
+	min-height: 50px;
+	background-color: $header-background;
+	width: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	margin-bottom: 50px;
+	a{
+		text-decoration: none;
+		margin-left: 20px;
+		font-size: 2.5em;
+		font-style: oblique;
+		font-family: Sans-serif, Times, serif;
+	}
+
+    border-bottom: thick dotted #E0E0D1;
+}
+
 .error {
 	color:red;
 }

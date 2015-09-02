@@ -1,17 +1,21 @@
-<h1>Results</h1>
+<div class="content">
+	<h1>Results</h1>
 
-<h3>Reverse Complement</h3>
-<p><%= @seq.complement %></p>
+	<h3>Reverse Complement</h3>
+	<p><%= @seq.complement %></p>
 
-<h3>3' to 5'</h3>
-<p><%= @seq.reverse %></p>
+	<h3>3' to 5'</h3>
+	<p><%= @seq.reverse %></p>
 
-<h3>Transcribed</h3>
-<p><%= @seq.rna %></p>
+	<h3>Transcribed</h3>
+	<p><%= @seq.rna %></p>
 
-<h3>Translated</h3>
-<% if @seq.length >= 3 %>
-	<p><%= @seq.translate %></p>
-<% else %>
-	<p>Proteins are each 3 nucleotide long</p>
-<% end %>
+	<h3>Translated</h3>
+	<% if @seq.length >= 3 %>
+		<p><%= @seq.translate %></p>
+	<% else %>
+		<p>Amino acids are at least 3 nucleotides long</p>
+	<% end %>
+
+	<%= link_to "Search again?", root_path %> 
+</div>

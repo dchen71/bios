@@ -1,6 +1,11 @@
 <div class="content">
-	<h1>Quick DNA Translator</h1>
-	<hr>
+	<div class="content-header">
+		<h2>DNA Translator</h2>
+		<hr>
+	</div>
+	<div class="about">
+		<p>This tool will allow you to input a set of nucleotides and be able to retrieve the reverse complement, 3' to 5' reading, the sequence transcribed into rna, as well as the sequence translated into amino acids</p>
+	</div>
 	<%= form_for @sp, :url=> search_path, :method => :get, :validate => true do |f| %>
 	  <div class="error">
 	  	<p><%= flash[:error] %></p>

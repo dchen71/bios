@@ -26,30 +26,33 @@ html{
 }
 
 .content{
-	margin-top: 50px;
+	margin-top: 70px;
 }
 
 /* Header*/
 
 header{
-	min-height: 50px;
-	background-color: $header-background;
 	width: 100%;
 	margin: 0;
 	top: 0;
 	left: 0;
-	position: absolute;
-	margin-bottom: 50px;
+	position: fixed;
+
+	min-height: 50px;
+	background-color: $header-background;
+    border-bottom: thick dotted #E0E0D1;
+
 	a{
 		text-decoration: none;
 		margin-left: 20px;
 		font-size: 2.5em;
 		font-style: oblique;
 		font-family: Sans-serif, Times, serif;
+		color: #999966;
 	}
-
-    border-bottom: thick dotted #E0E0D1;
 }
+
+
 
 .error {
 	color:red;

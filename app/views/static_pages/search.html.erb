@@ -1,18 +1,18 @@
-<div class="content">
+<div class="content" id="search">
 	<h1>Results</h1>
 
 	<h3>Reverse Complement</h3>
-	<p><%= @seq.complement %></p>
+	<p><%= @seq.complement.upcase %></p>
 
 	<h3>3' to 5'</h3>
-	<p><%= @seq.reverse %></p>
+	<p><%= @seq.reverse.upcase %></p>
 
 	<h3>Transcribed</h3>
-	<p><%= @seq.rna %></p>
+	<p><%= @seq.rna.upcase %></p>
 
 	<h3>Translated</h3>
 	<% if @seq.length >= 3 %>
-		<p><%= @seq.translate %></p>
+		<p><%= @seq.translate.upcase %></p>
 	<% else %>
 		<p>Amino acids are at least 3 nucleotides long</p>
 	<% end %>

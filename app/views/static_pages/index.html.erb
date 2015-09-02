@@ -1,17 +1,27 @@
-<div class="content">
+<div class="content" id="index">
 	<div class="content-header">
-		<h2>DNA Translator</h2>
+		<h2 class="content-title">DNA Translator</h2>
 		<hr>
 	</div>
 	<div class="about">
+		<h3>About</h3>
+		<hr class="half">
 		<p>This tool will allow you to input a set of nucleotides and be able to retrieve the reverse complement, 3' to 5' reading, the sequence transcribed into rna, as well as the sequence translated into amino acids</p>
+	</div>
+	<div class="rules">
+		<h3>Rules</h3>
+		<hr class="half">
+		<ul>
+			<li>Nucleotides must be either A, T, G, C, or U</li>
+			<li>Amino acids are at least 3 nucleotides long</li>
+		</ul>
 	</div>
 	<%= form_for @sp, :url=> search_path, :method => :get, :validate => true do |f| %>
 	  <div class="error">
 	  	<p><%= flash[:error] %></p>
 	  </div>
 	  <p>
-	    <%= f.label :nucleotide %><br />
+	    <%= f.label :Sequence %><br />
 	    <%= f.text_area :nucleotide, id: 'nuc_search' %>
 	  </p>
 	  <p><%= f.submit "Search" %></p>

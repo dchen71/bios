@@ -25,8 +25,33 @@ html{
 	background-color: $background;
 }
 
+.error {
+	color:red;
+}
+
+.container{
+	margin-right: 10%;
+	margin-left: 10%;
+	background-color: #A0A0B8;
+	box-shadow: 5px 5px 5px #888888;
+}
+
 .content{
-	margin-top: 70px;
+	margin-top: 60px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.content-header{
+	.content-title{
+		text-align: center;
+	}
+}
+
+.half{
+	width: 50%;
+	text-align:left;
+	margin-left:0;
 }
 
 /* Header*/
@@ -53,14 +78,22 @@ header{
 }
 
 
+/* Index */
 
-.error {
-	color:red;
+#index{
+
 }
+
+
+/* Search */
 
 #nuc_search{
 	resize: none;
 	width: 25%;
 	min-height: 100px;
 	height: 25%;
+}
+
+#search{
+
 }

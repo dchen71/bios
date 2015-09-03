@@ -16,14 +16,16 @@
 			<li>Amino acids are at least 3 nucleotides long</li>
 		</ul>
 	</div>
-	<%= form_for @sp, :url=> search_path, :method => :get, :validate => true do |f| %>
-	  <div class="error">
-	  	<p><%= flash[:error] %></p>
-	  </div>
-	  <p>
-	    <%= f.label :Sequence %><br />
-	    <%= f.text_area :nucleotide, id: 'nuc_search' %>
-	  </p>
-	  <p><%= f.submit "Search" %></p>
-	<% end %>
+	<div class="search-form">
+		<%= form_for @sp, :url=> search_path, :method => :get, :validate => true do |f| %>
+		  <div class="error">
+		  	<p><%= flash[:error] %></p>
+		  </div>
+		  <p>
+		    <%= f.label :Sequence %><br />
+		    <%= f.text_area :nucleotide, id: 'nuc_search' %>
+		  </p>
+		  <p><%= f.submit "Search", id: 'submit_search' %></p>
+		<% end %>
+	</div>
 </div>

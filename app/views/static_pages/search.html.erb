@@ -1,21 +1,30 @@
 <div class="content" id="search">
-	<h1>Results</h1>
+	<div class="content-header">
+		<h2 class="content-title">Results</h2>
+		<hr>
+	</div>
 
-	<h3>Reverse Complement</h3>
-	<p><%= @seq.complement.upcase %></p>
+	<div class="results">	
+		<h3>Reverse Complement</h3>
+		<hr class="half">
+		<p class="results"><%= @seq.complement.upcase %></p>
 
-	<h3>3' to 5'</h3>
-	<p><%= @seq.reverse.upcase %></p>
+		<h3>3' to 5' Readings</h3>
+		<hr class="half">
+		<p class="results"><%= @seq.reverse.upcase %></p>
 
-	<h3>Transcribed</h3>
-	<p><%= @seq.rna.upcase %></p>
+		<h3>Transcribed</h3>
+		<hr class="half">
+		<p class="results"><%= @seq.rna.upcase %></p>
 
-	<h3>Translated</h3>
-	<% if @seq.length >= 3 %>
-		<p><%= @seq.translate.upcase %></p>
-	<% else %>
-		<p>Amino acids are at least 3 nucleotides long</p>
-	<% end %>
+		<h3>Translated</h3>
+		<hr class="half">
+		<% if @seq.length >= 3 %>
+			<p class="results"><%= @seq.translate.upcase %></p>
+		<% else %>
+			<p class="results">Amino acids are at least 3 nucleotides long</p>
+		<% end %>
+	</div>
 
-	<%= link_to "Search again?", root_path %> 
+	<%= link_to "Search again?", root_path, class: 'again' %> 
 </div>

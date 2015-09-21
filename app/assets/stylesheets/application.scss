@@ -126,11 +126,12 @@ header{
 .again{
 	width: 5em;
 	height: 2em;
-	background-color: #CCFFFF;
-    border: 2px solid #F0F0F5;
-    color: black;
+	padding: 5px 5px 5px 5px;
+	background-color: #0066CC;
+    border: 1px solid #F0F0F5;
+    color: white;
     text-decoration: none;
     &:hover{
-		background-color: #B8E6E6;
+		background-color: #0080FF;
     }
 }

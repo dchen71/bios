@@ -5,6 +5,12 @@
 	</div>
 
 	<div class="results">	
+		<h3>Results for:</h3>	
+		<hr class="half">
+		<p><b><%= @seq.upcase %></b></p>
+		<p><b>Length: </b><%= @seq.length %></p>
+		<br>
+
 		<h3>Reverse Complement</h3>
 		<hr class="half">
 		<p class="results"><%= @seq.complement.upcase %></p>
@@ -25,6 +31,7 @@
 			<p class="results">Amino acids are at least 3 nucleotides long</p>
 		<% end %>
 	</div>
+	<br>
 
 	<%= link_to "Search again?", root_path, class: 'again' %> 
 </div>

@@ -33,5 +33,20 @@
 	</div>
 	<br>
 
+	<div>
+		<dl class="chart">
+			<dt>A</dt>
+			<dd><div id="data-one" class="bar" style="width: <%= @a %>%"><%= @a %>%</div></dd>
+			<dt>T</dt>
+			<dd><div id="data-two" class="bar" style="width: <%= @t %>%"><%= @t %>%</div></dd>
+			<dt>G</dt>
+			<dd><div id="data-three" class="bar" style="width: <%= @g %>%"><%= @g %>%</div></dd>
+			<dt>C</dt>
+			<dd><div id="data-four" class="bar" style="width: <%= @c %>%"><%= @c %>%</div></dd>
+			<dt>U</dt>
+			<dd><div id="data-five" class="bar" style="width: <%= @u %>%"><%= @u %>%</div></dd>
+		</dl>
+	</div>
+
 	<%= link_to "Search again?", root_path, class: 'again' %> 
 </div>

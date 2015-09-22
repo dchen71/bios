@@ -4,49 +4,52 @@
 		<hr>
 	</div>
 
-	<div class="results">	
-		<h3>Results for:</h3>	
-		<hr class="half">
-		<p><b><%= @seq.upcase %></b></p>
-		<p><b>Length: </b><%= @seq.length %></p>
-		<br>
+	<div class="main">
+		<div class="results pull-left">	
+			<h3>Results for:</h3>	
+			<hr class="half">
+			<p><b><%= @seq.upcase %></b></p>
+			<p><b>Length: </b><%= @seq.length %></p>
+			<br>
 
-		<h3>Reverse Complement</h3>
-		<hr class="half">
-		<p class="results"><%= @seq.complement.upcase %></p>
+			<h3>Reverse Complement</h3>
+			<hr class="half">
+			<p class="results"><%= @seq.complement.upcase %></p>
 
-		<h3>3' to 5' Readings</h3>
-		<hr class="half">
-		<p class="results"><%= @seq.reverse.upcase %></p>
+			<h3>3' to 5' Readings</h3>
+			<hr class="half">
+			<p class="results"><%= @seq.reverse.upcase %></p>
 
-		<h3>Transcribed</h3>
-		<hr class="half">
-		<p class="results"><%= @seq.rna.upcase %></p>
+			<h3>Transcribed</h3>
+			<hr class="half">
+			<p class="results"><%= @seq.rna.upcase %></p>
 
-		<h3>Translated</h3>
-		<hr class="half">
-		<% if @seq.length >= 3 %>
-			<p class="results"><%= @seq.translate.upcase %></p>
-		<% else %>
-			<p class="results">Amino acids are at least 3 nucleotides long</p>
-		<% end %>
+			<h3>Translated</h3>
+			<hr class="half">
+			<% if @seq.length >= 3 %>
+				<p class="results"><%= @seq.translate.upcase %></p>
+			<% else %>
+				<p class="results">Amino acids are at least 3 nucleotides long</p>
+			<% end %>
+		</div>
+
+		<div class="pull-right">
+			<h3>Distribution of bases</h3>
+			<dl class="chart">
+				<dt>A</dt>
+				<dd><div class="bar" style="width: <%= @a %>%"><%= @a %>%</div></dd>
+				<dt>T</dt>
+				<dd><div class="bar" style="width: <%= @t %>%"><%= @t %>%</div></dd>
+				<dt>G</dt>
+				<dd><div class="bar" style="width: <%= @g %>%"><%= @g %>%</div></dd>
+				<dt>C</dt>
+				<dd><div class="bar" style="width: <%= @c %>%"><%= @c %>%</div></dd>
+				<dt>U</dt>
+				<dd><div class="bar" style="width: <%= @u %>%"><%= @u %>%</div></dd>
+			</dl>
+		</div>
 	</div>
-	<br>
 
-	<div>
-		<dl class="chart">
-			<dt>A</dt>
-			<dd><div id="data-one" class="bar" style="width: <%= @a %>%"><%= @a %>%</div></dd>
-			<dt>T</dt>
-			<dd><div id="data-two" class="bar" style="width: <%= @t %>%"><%= @t %>%</div></dd>
-			<dt>G</dt>
-			<dd><div id="data-three" class="bar" style="width: <%= @g %>%"><%= @g %>%</div></dd>
-			<dt>C</dt>
-			<dd><div id="data-four" class="bar" style="width: <%= @c %>%"><%= @c %>%</div></dd>
-			<dt>U</dt>
-			<dd><div id="data-five" class="bar" style="width: <%= @u %>%"><%= @u %>%</div></dd>
-		</dl>
-	</div>
 
 	<%= link_to "Search again?", root_path, class: 'again' %> 
 </div>
